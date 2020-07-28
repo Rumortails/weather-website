@@ -7,6 +7,8 @@ const forecast = require('./utils/forecast')
 //neccessary for express
 const app = express()
 
+const port = process.env.PORT || 3000
+
 //define paths for express config
 const publicDirPath = path.join(__dirname, "../public")
 const viewPath = path.join(__dirname, "../templates/views")
@@ -103,6 +105,6 @@ app.get('*', (req,res)=>{
 })
 
 //setups the port for the server to work on access it by typing localhost:3000 into broswer
-app.listen(3000,()=>{
-    console.log("server is up")
+app.listen(port,()=>{
+    console.log("server is up on port " + 3000)
 })
