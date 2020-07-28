@@ -106,5 +106,5 @@ app.get('*', (req,res)=>{
 
 //setups the port for the server to work on access it by typing localhost:3000 into broswer
 app.listen(port,()=>{
-    console.log("server is up on port " + 3000)
+    console.log("server is up on port " + port)
 })
